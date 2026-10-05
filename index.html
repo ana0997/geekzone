@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeekZone - Loja Virtual</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Widget do Robô de Chat -->
+<div id="chat-widget-container">
+  <!-- Botão Flutuante (Robô) -->
+  <button id="chat-toggle-btn" aria-label="Abrir Chat">
+    🤖
+  </button>
+
+  <!-- Janela do Chat -->
+  <div id="chat-box" class="chat-hidden">
+    <div class="chat-header">
+      <span class="chat-title">🤖 GeekBot</span>
+      <button id="chat-close-btn">&times;</button>
+    </div>
+    <div id="chat-messages" class="chat-messages">
+      <div class="message bot-message">
+        Olá! Sou o GeekBot 🤖. Como posso ajudar-te hoje?
+      </div>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Escreve uma mensagem..." />
+      <button id="chat-send-btn">Enviar</button>
+    </div>
+  </div>
+</div>
+
+  <!-- Cabeçalho / Navbar -->
+  <header>
+    <div class="logo">
+      <h1>GeekZone </h1>
+    </div>
+    <div class="header-actions">
+      <div class="cart-info">
+        🛒 Carrinho: <strong>R$ <span id="total-cart">0,00</span></strong>
+      </div>
+      <button id="theme-toggle" class="btn-theme">🌙 Dark Mode</button>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal / Vitrine -->
+  <main class="container">
+    <h2>Vitrine de Produtos</h2>
+    <div class="product-grid">
+      
+      <!-- Produto 1 -->
+      <div class="product-card">
+        <img src="https://brincamundo.com.br/wp-content/uploads/2023/06/acition-figure-anime-one-piece-10cm.jpg" alt="Action Figure Anime">
+        <h3>Action Figure Anime</h3>
+        <p class="price">R$ 150,00</p>
+        <button class="btn-buy" onclick="addToCart(150.00)">Comprar</button>
+      </div>
+
+      <!-- Produto 2 -->
+      <div class="product-card">
+        <img src="https://a-static.mlcdn.com.br/420x420/video-game-portatil-999-jogos-mini-game-retro-modelo-novo-e9999-centercoisas/centercoisas/20233457/ea8b0690f4145450cdc6c16e0e985522.jpeg" alt="Console Retro Portátil">
+        <h3>Vídeo Game Retro Portátil</h3>
+        <p class="price">R$ 350,00</p>
+        <button class="btn-buy" onclick="addToCart(350.00)">Comprar</button>
+      </div>
+
+      <!-- Produto 3 -->
+      <div class="product-card">
+        <img src="https://cdn.awsli.com.br/1500x1500/35/35541/produto/379683921/acg2502-headphone-3-em-1-2-4g-preto-aoc-capa-f5uf1cfno6.jpg" alt="Headset Gamer RGB">
+        <h3>Headset Gamer RGB</h3>
+        <p class="price">R$ 200,00</p>
+        <button class="btn-buy" onclick="addToCart(200.00)">Comprar</button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
